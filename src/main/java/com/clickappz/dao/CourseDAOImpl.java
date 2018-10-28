@@ -6,11 +6,13 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.clickappz.enums.TransactionEnum;
 import com.clickappz.model.CourseDetail;
 
-public class CourseDAOImpl implements CourseDAOInf {
+@Repository
+public class CourseDAOImpl implements CourseDAO {
 	
 	@Autowired
 	private SessionFactory sessionFactory;

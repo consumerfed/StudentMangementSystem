@@ -8,9 +8,12 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.clickappz.dao.CourseDAOImpl;
+import com.clickappz.dao.CourseDAO;
 import com.clickappz.enums.TransactionEnum;
 import com.clickappz.model.CourseDetail;
 
@@ -20,19 +23,15 @@ import com.clickappz.model.CourseDetail;
  */
 @Service
 @Transactional
-public class CourseServiceImpl implements CourseServiceInf {
-	
-	private CourseDAOImpl courseDAOImpl;
+public class CourseServiceImpl implements CourseService {
 	
 	
+	private CourseDAO courseDAO;
 
-	public CourseDAOImpl getCourseDAOImpl() {
-		return courseDAOImpl;
-	}
-
+	
 	@Autowired
-	public void setCourseDAOImpl(CourseDAOImpl courseDAOImpl) {
-		this.courseDAOImpl = courseDAOImpl;
+	public void setCourseDAO(CourseDAO courseDAO) {
+		this.courseDAO = courseDAO;
 	}
 
 	/* (non-Javadoc)
@@ -57,7 +56,7 @@ public class CourseServiceImpl implements CourseServiceInf {
 	public List<CourseDetail> getAvailableCourses() {
 		// TODO Auto-generated method stub
 		
-		return getCourseDAOImpl().getAvailableCourses();
+		return courseDAO.getAvailableCourses();
 	}
 
 	/* (non-Javadoc)
@@ -65,7 +64,7 @@ public class CourseServiceImpl implements CourseServiceInf {
 	 */
 	public TransactionEnum updateCourse(CourseDetail course) {
 		// TODO Auto-generated method stub
-		return getCourseDAOImpl().updateCourse(course);
+		return courseDAO.updateCourse(course);
 	}
 
 }

@@ -19,7 +19,7 @@ import com.clickappz.model.StudentDetail;
  *
  */
 @Repository
-public class StudentDAOImpl implements StudentDAOInf {
+public class StudentDAOImpl implements StudentDAO {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -43,8 +43,9 @@ public class StudentDAOImpl implements StudentDAOInf {
 		return null;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<StudentDetail> getStudentList() {
 		// TODO Auto-generated method stub
 		Criteria criteria = getSession().createCriteria(StudentDetail.class);
-		return criteria.list();
+		return (List<StudentDetail>)criteria.list();
 	}}

@@ -12,7 +12,7 @@ import com.clickappz.enums.TransactionEnum;
  * @author itsection
  *
  */
-public interface StudentDAOInf {
+public interface StudentDAO {
 	
 	
 	public TransactionEnum registerStudent();

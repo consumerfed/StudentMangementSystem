@@ -1,18 +1,18 @@
 /**
  * 
  */
-package com.clickappz.dao;
+package com.clickappz.service;
 
 import java.util.List;
 
-import com.clickappz.model.CourseDetail;
 import com.clickappz.enums.TransactionEnum;
+import com.clickappz.model.CourseDetail;
 
 /**
  * @author nijesh
  *
  */
-public interface CourseDAOInf {
+public interface CourseService {
 	
 	public TransactionEnum createCourse(CourseDetail course);
 	public TransactionEnum removeCourse(int courseId);
