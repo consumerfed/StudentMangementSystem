@@ -18,8 +18,8 @@ public class TestController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ModelAndView test() {
-		System.out.println(" sample");
-		ModelAndView mv = new ModelAndView(" sample program ");
+		System.out.println(" redirecting to index.html ");
+		ModelAndView mv = new ModelAndView("index");
 		return mv;
 		
 	}

@@ -1,0 +1,17 @@
+com\clickappz\model\StudentCourseDetail.class
+com\clickappz\service\CourseService.class
+com\clickappz\config\HibernateConfig.class
+com\clickappz\controller\TestController.class
+com\clickappz\dao\CourseDAOImpl.class
+com\clickappz\config\WebConfig.class
+com\clickappz\model\CourseDetail.class
+com\clickappz\config\WebInitializer.class
+com\clickappz\dao\StudentDAOImpl.class
+com\clickappz\enums\TransactionEnum.class
+com\clickappz\view\CourseView.class
+com\clickappz\dao\CourseDAO.class
+com\clickappz\dao\StudentDAO.class
+com\clickappz\service\CourseServiceImpl.class
+com\clickappz\controller\CourseController.class
+com\clickappz\controller\StudentController.class
+com\clickappz\model\StudentDetail.class
